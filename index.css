@@ -19,10 +19,12 @@
 .box-1 {
     width: 125%;
     overflow: hidden;
+    background-color: hsl(0, 100%, 100%);
 }
 
 .image {
     width: 400px;
+    height: 325px;
 }
 
 .box-2 {
@@ -47,4 +49,22 @@
 
 .author {
     margin: 0;
+    color:  hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.date {
+    color:  hsl(212, 23%, 69%);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.share-icon {
+    width: 40px;
+    height: 40px;
+    float: right;
 }
