@@ -5,4 +5,46 @@
     justify-content: center;
     align-items: center;
     background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+}
+
+.outer-box {
+    display: flex;
+    width: 55%;
+    height: 33%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box-1 {
+    width: 125%;
+    overflow: hidden;
+}
+
+.image {
+    width: 400px;
+}
+
+.box-2 {
+    padding: 20px;
+    background-color: hsl(0, 100%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 45px;
+}
+
+.heading {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.para {
+    color: hsl(214, 17%, 51%);
+    font-size: 13px;
+}
+
+.author {
+    margin: 0;
 }
