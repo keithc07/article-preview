@@ -33,6 +33,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px 45px;
+    justify-content: center;
 }
 
 .heading {
@@ -45,26 +46,88 @@
 .para {
     color: hsl(214, 17%, 51%);
     font-size: 13px;
+    margin-bottom: 20px;
 }
 
 .author {
     margin: 0;
     color:  hsl(217, 19%, 35%);
     font-weight: 700;
+    font-size: 13px;
 }
 
 .date {
     color:  hsl(212, 23%, 69%);
+    font-size: 13px;
+    margin-top: 5px;
 }
 
 .avatar {
     width: 40px;
     height: 40px;
     float: left;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.share-icon {
-    width: 40px;
-    height: 40px;
+.share-icon-box {
     float: right;
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.share-icon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+
+.popup-text {
+    visibility: hidden;
+    width: 225px;
+    height: 50px;
+    background-color: hsl(217, 19%, 35%);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 44%;
+}
+
+.popup-inner-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.popup-text::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: 100%;
+    left: 44%;
+    border-width: 13px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.share-icon-box .show {
+    visibility: visible;
+}
+
+span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: hsl(212, 23%, 69%);
 }
