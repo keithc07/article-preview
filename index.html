@@ -31,13 +31,13 @@
         <div>
           <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar"/>
           <div class="share-icon-box" onclick="onClick()">
-            <img class="share-icon" src="./images/icon-share.svg" alt="share"/>
+            <img class="share-icon" src="./images/icon-share-1.svg" alt="share"/>
             <div class="popup-text" id="share-popup">
               <div class="popup-inner-box">
                 <span>Share</span>
-                <img src="./images/icon-facebook.svg" alt="facebook" />
-                <img src="./images/icon-twitter.svg" alt="twitter" />
-                <img src="./images/icon-pinterest.svg" alt="pinterest" />
+                <a href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="facebook" /></a>
+                <a href="https://twitter.com/home?lang=en"><img src="./images/icon-twitter.svg" alt="twitter" /></a>
+                <a href="https://www.pinterest.com.au/"><img src="./images/icon-pinterest.svg" alt="pinterest" /></a>
               </div>
             </div>
           </div>  
@@ -50,10 +50,17 @@
 
     <script>
       function onClick() {
-        var colorChange = document.getElementsByClassName("share-icon-box")
-        console.log(colorChange)
         var popup = document.getElementById("share-popup");
         popup.classList.toggle("show");
+        var colorChange = document.getElementsByClassName("share-icon-box")
+        var shareIcon = document.getElementsByClassName("share-icon")
+        if (popup.classList.contains("show")) {
+          colorChange[0].style.backgroundColor = "hsl(214, 17%, 51%)"
+          shareIcon[0].src="./images/icon-share-2.svg"
+        } else {
+          colorChange[0].style.backgroundColor = "hsl(210, 46%, 95%)"
+          shareIcon[0].src="./images/icon-share-1.svg"
+        }
       }
     </script>
   </body>
