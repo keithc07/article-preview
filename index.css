@@ -6,20 +6,21 @@
     align-items: center;
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
+    margin: 0;
 }
 
 .outer-box {
     display: flex;
     width: 55%;
     height: 33%;
-    overflow: hidden;
-    border-radius: 10px;
 }
 
 .box-1 {
     width: 125%;
     overflow: hidden;
     background-color: hsl(0, 100%, 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .image {
@@ -34,6 +35,12 @@
     flex-direction: column;
     padding: 30px 45px;
     justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.box-2-innerbox {
+    position: relative;
 }
 
 .heading {
@@ -67,26 +74,32 @@
     height: 40px;
     float: left;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .share-icon-box {
     float: right;
-    border-radius: 50%;
-    margin-top: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: hsl(210, 46%, 95%);
+    margin-top: -47px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background-color: hsl(0, 100%, 100%);
+}
+
+.share-icon-inner-box {
+    width: 30px;
+    height: 30px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .share-icon {
     width: 15px;
     height: 15px;
-    position: absolute;
 }
 
 .popup-text {
@@ -98,7 +111,7 @@
     text-align: center;
     border-radius: 6px;
     position: absolute;
-    bottom: 44%;
+    bottom: 130%;
 }
 
 .popup-inner-box {
@@ -129,4 +142,74 @@ span {
     letter-spacing: 5px;
     font-size: 13px;
     color: hsl(212, 23%, 69%);
+}
+
+.fb-icon {
+    margin-top: 4px;
+}
+
+.twit-icon {
+    margin-top: 4px;
+}
+
+.pint-icon {
+    margin-top: 4px;
+}
+
+@media (max-width: 375px) {
+    .outer-box {
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+    }
+    .image {
+        height: 255px;
+        width: 338px;
+    }
+    .box-1 {
+        width: 100%;
+        height: 29%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .heading {
+        font-size: 1rem;
+        padding: 0px 35px;
+    }
+    .box-2 {
+        padding: 30px 0px 0px 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        border-top-right-radius: 0px;
+    }
+    .para {
+        padding: 0px 35px;
+    }
+    .popup-text {
+        z-index: 1;
+        top: 0px;
+        width: 340px;
+        height: 75px;
+        right: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .box-2-innerbox {
+        padding: 15px 35px 0px;
+    }
+    .share-icon-inner-box {
+        z-index: 2;
+    }
+    .popup-text::after {
+        opacity: 0;
+    }
+    .popup-inner-box {
+        margin: 0px 0px 0px 63px;
+        width: 50%;
+        justify-content: flex-start;
+        justify-content: space-between;
+    }
 }

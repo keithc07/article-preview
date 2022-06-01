@@ -28,22 +28,27 @@
           to help you make any room feel complete.
         </p>
         
-        <div>
-          <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar"/>
+        <div class="box-2-innerbox">
+          <div class="author-box">
+            <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar"/>
+            <p class="author">Michelle Appleton</p>
+            <p class="date">28 Jun 2020</p>
+          </div>
+            
           <div class="share-icon-box" onclick="onClick()">
-            <img class="share-icon" src="./images/icon-share-1.svg" alt="share"/>
+            <div class="share-icon-inner-box">
+              <img class="share-icon" src="./images/icon-share-1.svg" alt="share"/>
+            </div>
             <div class="popup-text" id="share-popup">
               <div class="popup-inner-box">
                 <span>Share</span>
-                <a href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="facebook" /></a>
-                <a href="https://twitter.com/home?lang=en"><img src="./images/icon-twitter.svg" alt="twitter" /></a>
-                <a href="https://www.pinterest.com.au/"><img src="./images/icon-pinterest.svg" alt="pinterest" /></a>
+                <a class="fb-icon" href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="facebook" /></a>
+                <a class="twit-icon" href="https://twitter.com/home?lang=en"><img src="./images/icon-twitter.svg" alt="twitter" /></a>
+                <a class="pint-icon" href="https://www.pinterest.com.au/"><img src="./images/icon-pinterest.svg" alt="pinterest" /></a>
               </div>
             </div>
           </div>  
-          <p class="author">Michelle Appleton</p>
-          <p class="date">28 Jun 2020</p>
-          
+
         </div>
       </div>
     </main>
@@ -52,7 +57,7 @@
       function onClick() {
         var popup = document.getElementById("share-popup");
         popup.classList.toggle("show");
-        var colorChange = document.getElementsByClassName("share-icon-box")
+        var colorChange = document.getElementsByClassName("share-icon-inner-box")
         var shareIcon = document.getElementsByClassName("share-icon")
         if (popup.classList.contains("show")) {
           colorChange[0].style.backgroundColor = "hsl(214, 17%, 51%)"
@@ -62,6 +67,16 @@
           shareIcon[0].src="./images/icon-share-1.svg"
         }
       }
+
+      function media(x) {
+        if (x.matches) { // If media query matches
+          
+        } else {
+          // document.body.style.backgroundColor = "pink";
+        }
+      }
+      var x = window.matchMedia("(max-width: 375px)")
+      x.addListener(media) // Attach listener function on state changes
     </script>
   </body>
 </html>
